@@ -1,3 +1,4 @@
+require 'pry'
 class Person
 
   attr_accessor :name, :birthday, :hair_color, :eye_color, :height, :weight,
@@ -5,5 +6,6 @@ class Person
 
   def initialize(attributes)
     attributes.each {|k,v| self.send(("#{k}="), v)}
+    binding.pry
   end
 end
